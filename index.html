@@ -23,65 +23,64 @@
     ></script>
     <script src="/lib/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
   </head>
+
   <body>
     <header>
       <div class="container">
-        <header
-          class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+        <div
+          class="d-flex justify-content-between align-items-center font-montserrat"
         >
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
-          >
-            <svg
-              class="bi me-2"
-              width="40"
-              height="32"
+          <nav class="left">
+            <a
+              class="text-decoration-none text-black"
+              href="/"
+              >Properties</a
             >
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-            <span class="fs-4">Simple header</span>
-          </a>
+            <a
+              class="text-decoration-none text-black ms-4"
+              href="/"
+              >Office</a
+            >
+            <a
+              class="text-decoration-none text-black ms-4"
+              href="/"
+              >Profestionals</a
+            >
+          </nav>
 
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link active"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link"
-                >Features</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link"
-                >Pricing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link"
-                >FAQs</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link"
-                >About</a
-              >
-            </li>
-          </ul>
-        </header>
+          <div class="right">
+            <div class="lang d-flex">
+              <div class="opt-1">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  id="vnd"
+                  autocomplete="off"
+                  checked
+                />
+                <label
+                  class="btn"
+                  for="vnd"
+                  >VND</label
+                >
+              </div>
+
+              <div class="opt-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  id="usd"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn"
+                  for="usd"
+                  >USD</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   </body>

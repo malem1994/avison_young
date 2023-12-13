@@ -1,0 +1,9 @@
+.lang {
+}
+.lang .btn-check:checked + .btn,
+.lang .btn.active,
+.lang .btn.show,
+.lang .btn:first-child:active,
+.lang :not(.btn-check) + .btn:active {
+  color: var(--color-black);
+}
