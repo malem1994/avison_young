@@ -1,0 +1,70 @@
+.bio {
+  &-card {
+    flex: 1 1;
+    display: flex;
+    gap: 20px;
+    padding: 32px 30px;
+    background-color: rgba(0, 0, 0, .02);
+  }
+
+  &-avatar {
+    img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    @extend .font-inter;
+    color: var(--color-black);
+
+    &--title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &--sub {
+      font-size: 16px;
+      color: rgba(0, 0, 0, .6);
+      margin-top: 16px;
+    }
+
+    &--contact {
+      font-size: 16px;
+      margin-top: 16px;
+
+      ul {
+        li {
+          display: flex;
+          gap: 12px;
+
+          a {
+            color: var(--color-black);
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline !important;
+            }
+          }
+
+          &+li {
+            margin-top: 16px;
+          }
+
+          .d-flex {
+            gap: 6px;
+
+            img {
+              width: 30px;
+              height: 20px;
+
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

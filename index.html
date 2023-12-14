@@ -23,260 +23,30 @@
     ></script>
     <script src="/lib/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Plugin CSS file with desired skin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
     <script src="/assets/js/origin.js"></script>
   </head>
 
   <body>
-    <header>
-      <div class="header--sup">
-        <div class="container">
-          <div
-            class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
-          >
-            <nav class="left">
-              <a href="/">Properties</a>
-              <a
-                class="ms-4"
-                href="/"
-                >Office</a
-              >
-              <a
-                class="ms-4"
-                href="/"
-                >Profestionals</a
-              >
-            </nav>
-
-            <div class="right">
-              <div class="d-flex align-items-center">
-                <div class="assets d-flex align-items-center">
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="options-outlined"
-                    id="vnd"
-                    autocomplete="off"
-                    checked
-                  />
-                  <label
-                    class="btn"
-                    for="vnd"
-                    >VND</label
-                  >
-                  <span>|</span>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="options-outlined"
-                    id="usd"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="btn"
-                    for="usd"
-                    >USD</label
-                  >
-                </div>
-
-                <div class="switch ms-4 ps-2 d-flex align-items-center">
-                  <span class="text-black me-2">SQM</span>
-                  <div class="form-check form-switch">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      role="switch"
-                      id="flexSwitchCheckDefault"
-                    />
-                  </div>
-                  <span class="ms-2">SQF</span>
-                </div>
-
-                <div class="lang ms-4 ps-2 d-flex align-items-center">
-                  <img
-                    src="./assets/img/icon-globe.svg"
-                    alt=""
-                  />
-                  <span class="fw-semibold text-black ms-1">En</span>
-                </div>
-
-                <div class="acts ms-4 ps-2">
-                  <a
-                    href="/"
-                    class="text-black fw-semibold"
-                    >Login</a
-                  >
-                  <span class="text-black fw-semibold">/</span>
-                  <a
-                    href="/"
-                    class="text-black fw-semibold"
-                    >Register</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="container">
-          <a href="#">
-            <img
-              src="./assets/img/logo-dark.png"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="menu">
-        <div class="overflow">
-          <div class="container">
-            <ul>
-              <li><a href="/">ABOUT US</a></li>
-              <li>
-                <a
-                  class="active"
-                  href="/"
-                  >SERVICES</a
-                >
-              </li>
-              <li><a href="/">INDUSTRIAL</a></li>
-              <li><a href="/">COMMERCIAL</a></li>
-              <li><a href="/">RETAIL</a></li>
-              <li><a href="/">RESIDENTIAL</a></li>
-              <li><a href="/">THOUGHT CAPITAL</a></li>
-              <li><a href="/">NEWS</a></li>
-              <li><a href="/">CONTACT</a></li>
-              <li><a href="/">CAREERES</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
 
     <main>
       <div class="container">
         <!-- FILTER -->
-        <section class="filter">
-          <form action="">
-            <div class="col">
-              <label for="id-1">Keyword Or Property ID</label>
-              <input
-                type="text"
-                class="form-control"
-                id="id-1"
-                placeholder=""
-                value=""
-              />
-            </div>
-            <div class="col">
-              <label for="id-2">Contract Type</label>
-              <select
-                id="id-2"
-                class="form-select"
-              >
-                <option>All</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="id-3">Property Type</label>
-              <select
-                id="id-3"
-                class="form-select"
-              >
-                <option>All</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="id-4">City/Province</label>
-              <select
-                id="id-4"
-                class="form-select"
-              >
-                <option>All</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="id-5">District</label>
-              <select
-                id="id-5"
-                class="form-select"
-              >
-                <option>All</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="id-6">Category</label>
-              <select
-                id="id-6"
-                class="form-select"
-              >
-                <option>All</option>
-              </select>
-            </div>
-            <div class="price col end">
-              <div class="price-labels d-flex justify-content-between">
-                <label class="mb-0">Price</label>
-                <div
-                  id="price-change"
-                  class="d-flex align-items-center"
-                >
-                  <img
-                    src="./assets/img/icon-level-down.svg"
-                    alt=""
-                  />
-                  <div class="text d-flex flex-column ms-2">
-                    <label class="mb-0">Input</label>
-                    <label class="mb-0">Range</label>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="price-change-content"
-                class="d-flex flex-column"
-              >
-                <div class="item inputs">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="From"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="To"
-                    value=""
-                  />
-                </div>
-
-                <div class="item range">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="From"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="To"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-
-            <button
-              class="btn btn-primary p-0"
-              type="submit"
-            >
-              <div class="fw-bold">SEARCH</div>
-            </button>
-          </form>
-        </section>
+        <section
+          id="filter"
+          class="filter"
+        ></section>
 
         <!-- INDUSTRIAL -->
         <section>
@@ -607,9 +377,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary mx-auto mt-55">
+            <a
+              class="btn btn-primary mx-auto mt-55"
+              href="/industrial.html"
+            >
               More properties
-            </button>
+            </a>
           </div>
         </section>
 
@@ -942,9 +715,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary mx-auto mt-55">
+            <a
+              class="btn btn-primary mx-auto mt-55"
+              href=""
+            >
               More properties
-            </button>
+            </a>
           </div>
         </section>
 
@@ -962,7 +738,7 @@
             >
               <div class="explorer-content-cap">Explore</div>
               <p class="explorer-content-title mt-3">OUR HOMES</p>
-              <button class="btn btn-primary mx-auto mt-55">Map Search</button>
+              <a class="btn btn-primary mx-auto mt-55">Map Search</a>
               <p class="explorer-content-meme pt-3">in map view</p>
             </div>
           </div>
@@ -1297,9 +1073,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary mx-auto mt-55">
+            <a
+              class="btn btn-primary mx-auto mt-55"
+              href=""
+            >
               More properties
-            </button>
+            </a>
           </div>
         </section>
 
@@ -1626,9 +1405,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary mx-auto mt-55">
+            <a
+              class="btn btn-primary mx-auto mt-55"
+              href=""
+            >
               More properties
-            </button>
+            </a>
           </div>
         </section>
 
@@ -1638,9 +1420,12 @@
             class="property d-flex flex-column align-items-center justify-content-center"
           >
             <h2 class="property-title">CAN’T FIND THE PROPERTY?</h2>
-            <button class="btn btn-primary mx-auto mt-3">
+            <a
+              class="btn btn-primary mx-auto mt-3"
+              href=""
+            >
               Property Alerts
-            </button>
+            </a>
             <p class="property-meme text-gray-800">You are looking for?</p>
           </div>
         </section>
@@ -1729,59 +1514,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary mx-auto mt-55">More project</button>
+            <a class="btn btn-primary mx-auto mt-55">More project</a>
           </div>
         </section>
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <div
-          class="footer-content d-flex flex-col flex-lg-row align-items-start gap-5 pt-75 pb-75"
-        >
-          <div class="footer-logo logo">
-            <a
-              class="d-block my-0"
-              href="#"
-            >
-              <img
-                src="./assets/img/logo-light.png"
-                alt=""
-              />
-            </a>
-          </div>
-
-          <div
-            class="footer-links d-flex flex-col flex-lg-row justify-content-center"
-          >
-            <ul>
-              <li><a href="/">Private Policy</a></li>
-              <li><a href="/">Term and Conditions</a></li>
-              <li><a href="/">Contact Us</a></li>
-            </ul>
-
-            <ul>
-              <li><a href="/">About Us</a></li>
-              <li><a href="/">Avisphere</a></li>
-              <li><a href="/">Cookie Settings</a></li>
-            </ul>
-
-            <ul>
-              <li><a href="/">Professionals & Offices</a></li>
-              <li><a href="/">Global Leadership</a></li>
-              <li><a href="/">Carreers</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="text-gray-800 bg-black">
-        <div class="container">
-          <p class="pt-25 pb-25 text-center">
-            &copy; Copyright 2058, Example Corporation
-          </p>
-        </div>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
   </body>
 </html>

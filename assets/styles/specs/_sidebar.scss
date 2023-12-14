@@ -1,0 +1,63 @@
+aside {
+  position: sticky;
+  top: 0;
+  max-width: 340px;
+}
+
+.sidebar {
+  &-heading {
+    background-color: #2A2A2A;
+    padding: 25px 25px;
+    color: var(--color-white);
+  }
+
+  &-content {
+    background-color: rgba(0, 0, 0, .04);
+
+    form {
+      button {
+        &[type="submit"] {
+          margin-top: 15px;
+          height: 52px;
+          grid-column-end: -1;
+        }
+      }
+
+      .list {
+        padding: 15px 25px 20px;
+      }
+
+      .act {
+        background-color: rgba(0, 0, 0, .1);
+        padding: 25px;
+        gap: 12px;
+      }
+    }
+
+    .col {
+
+      .btn-price,
+      label {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 600;
+        color: var(--color-black);
+
+        margin-bottom: 15px;
+      }
+
+      .form-control,
+      .form-select {
+        border-color: transparent;
+        border-radius: 0;
+
+        height: 52px;
+        background-color: rgba(0, 0, 0, .05);
+      }
+
+      &+.col {
+        margin-top: 16px;
+      }
+    }
+  }
+}
