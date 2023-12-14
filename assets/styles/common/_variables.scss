@@ -9,11 +9,11 @@
 }
 
 .text {
-  &-color-white {
+  &-white {
     color: var(--color-white);
   }
 
-  &-color-black {
+  &-black {
     color: var(--color-black);
   }
 
@@ -79,5 +79,47 @@
 
   &-whitesmoke {
     color: var(--color-whitesmoke);
+  }
+}
+
+@mixin spacing($spacing, $angle, $value) {
+  #{$spacing}-#{$angle}: $value;
+}
+
+$spaces: 15, 25, 55, 75;
+
+.m {
+  &t {
+    @each $space in $spaces {
+      &-#{$space} {
+        @include spacing(margin, top, #{$space}px);
+      }
+    }
+  }
+
+  &b {
+    @each $space in $spaces {
+      &-#{$space} {
+        @include spacing(margin, bottom, #{$space}px);
+      }
+    }
+  }
+}
+
+.p {
+  &t {
+    @each $space in $spaces {
+      &-#{$space} {
+        @include spacing(padding, top, #{$space}px);
+      }
+    }
+  }
+
+  &b {
+    @each $space in $spaces {
+      &-#{$space} {
+        @include spacing(padding, bottom, #{$space}px);
+      }
+    }
   }
 }

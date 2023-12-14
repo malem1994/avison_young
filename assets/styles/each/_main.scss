@@ -5,3 +5,32 @@ main {
     margin-top: 50px;
   }
 }
+
+.section {
+  &-body {
+    margin-top: 40px;
+
+    .listing {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 32px;
+
+      @media screen and (max-width: 992px) {
+        gap: 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.container {
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    max-width: unset;
+  }
+}

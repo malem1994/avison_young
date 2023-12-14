@@ -14,10 +14,17 @@
         grid-column-end: -1;
       }
     }
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .col {
-
 
     .btn-price,
     label {
@@ -82,7 +89,7 @@
 
   }
 
-  @media screen and (max-width: 1280px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 992px) {
+    padding: 16px 24px;
   }
 }

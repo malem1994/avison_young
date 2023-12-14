@@ -1,0 +1,37 @@
+footer {
+  background-color: #1A1A1A;
+
+  .footer {
+    &-content {}
+
+    &-logo {
+      a {
+        svg {
+          path {
+            color: red;
+          }
+        }
+      }
+    }
+
+    &-links {
+      flex: auto;
+
+      &.d-flex {
+        gap: 84px;
+      }
+
+      ul {
+        li {
+          a {
+            @extend .text-white;
+          }
+
+          &+li {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+}

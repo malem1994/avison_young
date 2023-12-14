@@ -1,0 +1,14 @@
+.property {
+  padding: 45px 24px 30px;
+  background: url("../../img/img-property.png") no-repeat center center/auto 100%;
+
+  &-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  &-meme {
+    margin-top: 32px;
+  }
+}
