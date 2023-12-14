@@ -78,3 +78,10 @@ body {
 a {
   text-decoration: none !important;
 }
+
+input,
+select {
+  &:focus {
+    box-shadow: none !important;
+  }
+}

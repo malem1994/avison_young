@@ -3,6 +3,8 @@ $(window).on("load", function () {
 
   $("#header").load("/layout/header.html");
   $("#footer").load("/layout/footer.html");
+  $("#sidebar").load("/layout/sidebar.html");
+
   $("#filter").load("/components/filter.html", function (data) {
     const priceChange = $('#price-change');
     const priceTextChange = $('#price-change .text');
@@ -22,4 +24,8 @@ $(window).on("load", function () {
       prefix: "$"
     });
   });
+
+  $("#tab").load("/components/tab.html");
+
+  $("#bio").load("/components/bio.html");
 })
