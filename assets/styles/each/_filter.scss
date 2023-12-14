@@ -1,0 +1,88 @@
+.filter {
+  padding: 40px 55px;
+  background-color: #393939;
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    button {
+      &[type="submit"] {
+        margin-top: 15px;
+        height: 52px;
+        grid-column-end: -1;
+      }
+    }
+  }
+
+  .col {
+
+
+    .btn-price,
+    label {
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 600;
+      color: var(--color-white);
+
+      margin-bottom: 15px;
+    }
+
+    .form-control,
+    .form-select {
+      border-color: transparent;
+      border-radius: 0;
+
+      height: 52px;
+    }
+
+    &.end {
+      grid-column-start: -3;
+      grid-column-end: -1;
+
+      .price-labels {
+        margin-bottom: 16px;
+      }
+
+      #price-change {
+        cursor: pointer;
+
+        .text {
+          cursor: pointer;
+          height: 16px;
+          overflow: hidden;
+
+          &.active {
+            &>* {
+              transform: translateY(-110%);
+            }
+          }
+        }
+
+        &-content {
+          max-height: 52px;
+          overflow: hidden;
+          gap: 40px;
+
+          .item {
+            &.inputs {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 20px;
+            }
+
+            &.active {
+              transform: translateY(calc(-100% - 40px));
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

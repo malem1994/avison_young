@@ -1,0 +1,142 @@
+header {
+  background-color: var(--color-white);
+}
+
+.header {
+  &--sup {
+    background: #F9F9F9;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+.left {
+  a {
+    font-weight: 600;
+    color: var(--color-black);
+
+    &:hover {
+      color: var(--color-gray-100);
+    }
+  }
+}
+
+.right {
+
+  .assets {
+    &>span {
+      font-weight: 600;
+      margin: 0 4px;
+      transform: translateY(-1px);
+    }
+
+    .btn-check {
+      &+.btn {
+        border: none;
+        color: var(--color-gray-100);
+        padding: 0;
+        font-weight: 600;
+      }
+    }
+
+    .btn-check:checked+.btn,
+    .btn.active,
+    .btn.show,
+    .btn:first-child:active,
+    :not(.btn-check)+.btn:active {
+      color: var(--color-black);
+    }
+  }
+
+  .switch {
+    &>span {
+      font-weight: 600;
+      margin: 0 4px;
+      color: var(--color-gray-100);
+    }
+
+    .form-switch {
+      margin-right: -10px;
+
+      * {
+        cursor: pointer;
+      }
+
+      .form-check-input {
+        background-color: var(--color-gainsboro);
+
+        &:checked {
+          background-color: blue;
+        }
+      }
+    }
+  }
+
+  .lang {
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .acts {
+    a {
+      &:hover {
+        color: var(--color-gray-100);
+      }
+    }
+  }
+}
+
+.logo {
+  a {
+    img {
+      height: 72px;
+      object-fit: contain;
+    }
+
+    display: block;
+    width: fit-content;
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+}
+
+.menu {
+  border-top: 3px solid var(--color-black);
+  box-sizing: border-box;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        display: block;
+        color: var(--color-black);
+        font-size: 16px;
+        font-weight: 600;
+
+        padding: 36px 16px;
+
+        &:not(.active) {
+          &:hover {
+            // background-color: rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, .4);
+          }
+        }
+
+        &.active {
+          background-color: rgba(0, 0, 0, 0.05);
+
+          &:hover {
+            color: rgba(0, 0, 0, .4);
+          }
+        }
+      }
+    }
+  }
+}

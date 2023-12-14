@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link
-      href="./assets/css/index.css"
+      href="./assets/styles/dist/index.css"
       rel="stylesheet"
     />
     <script src="/lib/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
@@ -22,66 +22,269 @@
       crossorigin="anonymous"
     ></script>
     <script src="/lib/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/origin.js"></script>
   </head>
 
   <body>
     <header>
-      <div class="container">
-        <div
-          class="d-flex justify-content-between align-items-center font-montserrat"
-        >
-          <nav class="left">
-            <a
-              class="text-decoration-none text-black"
-              href="/"
-              >Properties</a
-            >
-            <a
-              class="text-decoration-none text-black ms-4"
-              href="/"
-              >Office</a
-            >
-            <a
-              class="text-decoration-none text-black ms-4"
-              href="/"
-              >Profestionals</a
-            >
-          </nav>
+      <div class="header--sup">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <nav class="left">
+              <a href="/">Properties</a>
+              <a
+                class="ms-4"
+                href="/"
+                >Office</a
+              >
+              <a
+                class="ms-4"
+                href="/"
+                >Profestionals</a
+              >
+            </nav>
 
-          <div class="right">
-            <div class="lang d-flex">
-              <div class="opt-1">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  id="vnd"
-                  autocomplete="off"
-                  checked
-                />
-                <label
-                  class="btn"
-                  for="vnd"
-                  >VND</label
-                >
-              </div>
+            <div class="right">
+              <div class="d-flex align-items-center">
+                <div class="assets d-flex align-items-center">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options-outlined"
+                    id="vnd"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label
+                    class="btn"
+                    for="vnd"
+                    >VND</label
+                  >
+                  <span>|</span>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options-outlined"
+                    id="usd"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn"
+                    for="usd"
+                    >USD</label
+                  >
+                </div>
 
-              <div class="opt-2">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  id="usd"
-                  autocomplete="off"
-                />
-                <label
-                  class="btn"
-                  for="usd"
-                  >USD</label
-                >
+                <div class="switch ms-4 ps-2 d-flex align-items-center">
+                  <span class="text-black me-2">SQM</span>
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault"
+                    />
+                  </div>
+                  <span class="ms-2">SQF</span>
+                </div>
+
+                <div class="lang ms-4 ps-2 d-flex align-items-center">
+                  <img
+                    src="./assets/img/glosbe.svg"
+                    alt=""
+                  />
+                  <span class="fw-semibold text-black ms-1">En</span>
+                </div>
+
+                <div class="acts ms-4 ps-2">
+                  <a
+                    href="/"
+                    class="text-color-black fw-semibold"
+                    >Login</a
+                  >
+                  <span class="text-color-black fw-semibold">/</span>
+                  <a
+                    href="/"
+                    class="text-color-black fw-semibold"
+                    >Register</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="logo">
+        <div class="container">
+          <a href="#">
+            <img
+              src="./assets/img/logo.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="container">
+          <ul>
+            <li><a href="/">ABOUT US</a></li>
+            <li>
+              <a
+                class="active"
+                href="/"
+                >SERVICES</a
+              >
+            </li>
+            <li><a href="/">INDUSTRIAL</a></li>
+            <li><a href="/">COMMERCIAL</a></li>
+            <li><a href="/">RETAIL</a></li>
+            <li><a href="/">RESIDENTIAL</a></li>
+            <li><a href="/">THOUGHT CAPITAL</a></li>
+            <li><a href="/">NEWS</a></li>
+            <li><a href="/">CONTACT</a></li>
+            <li><a href="/">CAREERES</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
+
+    <main>
+      <div class="container">
+        <section class="filter">
+          <form action="">
+            <div class="col">
+              <label for="id-1">Keyword Or Property ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="id-1"
+                placeholder=""
+                value=""
+              />
+            </div>
+            <div class="col">
+              <label for="id-2">Contract Type</label>
+              <select
+                id="id-2"
+                class="form-select"
+              >
+                <option>All</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="id-3">Property Type</label>
+              <select
+                id="id-3"
+                class="form-select"
+              >
+                <option>All</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="id-4">City/Province</label>
+              <select
+                id="id-4"
+                class="form-select"
+              >
+                <option>All</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="id-5">District</label>
+              <select
+                id="id-5"
+                class="form-select"
+              >
+                <option>All</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="id-6">Category</label>
+              <select
+                id="id-6"
+                class="form-select"
+              >
+                <option>All</option>
+              </select>
+            </div>
+            <div class="price col end">
+              <div class="price-labels d-flex justify-content-between">
+                <label class="mb-0">Price</label>
+                <div
+                  id="price-change"
+                  class="d-flex align-items-center"
+                >
+                  <img
+                    src="./assets/img/icon-level-down.svg"
+                    alt=""
+                  />
+                  <div class="text d-flex flex-column ms-2">
+                    <label class="mb-0">Input</label>
+                    <label class="mb-0">Range</label>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="price-change-content"
+                class="d-flex flex-column"
+              >
+                <div class="item inputs">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="From"
+                    value=""
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="To"
+                    value=""
+                  />
+                </div>
+
+                <div class="item range">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="From"
+                    value=""
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="To"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn bg-white rounded-0"
+              type="submit"
+            >
+              <span class="fw-bold text-uppercase text-black">SEARCH</span>
+            </button>
+          </form>
+        </section>
+
+        <section>
+          <div
+            class="heading d-flex flex-column justify-content-center alig align-items-center"
+          >
+            <h2 class="fw-bold">INDUSTRIAL</h2>
+            <img
+              src="./assets/img/heading-underline.svg"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>

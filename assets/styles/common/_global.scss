@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  line-height: normal;
-}
-
 :root {
   /* fonts */
   --font-montserrat: 'Montserrat';
@@ -18,6 +13,8 @@ body {
   --font-size-xs: 12px;
 
   /* Colors */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
   --color-gray-100: rgba(0, 0, 0, 0.4);
   --color-gray-200: rgba(255, 255, 255, 0.4);
   --color-gray-300: rgba(255, 255, 255, 0.5);
@@ -39,4 +36,20 @@ body {
   --br-12xs: 1px;
   --br-7xs: 6px;
   --br-mini: 15px;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+
+  font-family: 'Montserrat', Courier, monospace;
+  background-color: var(--color-whitesmoke);
+}
+
+* {
+  transition: all .4s ease;
+}
+
+a {
+  text-decoration: none !important;
 }
