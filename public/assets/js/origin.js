@@ -1,5 +1,5 @@
 $(window).on("load", function () {
-  $("#header").load("/layout/header.html", function () {
+  $("#header").load("/public/layout/header.html", function () {
     const burger = $('#burger');
     const menu = $('#navg');
 
@@ -8,8 +8,8 @@ $(window).on("load", function () {
     })
   });
 
-  $("#footer").load("/layout/footer.html");
-  $("#sidebar").load("/layout/sidebar.html", function () {
+  $("#footer").load("/public/layout/footer.html");
+  $("#sidebar").load("/public/layout/sidebar.html", function () {
     const toggleSidebar = $('#sidebarToggle');
     const conttentSidebar = $('.sidebar-content');
 
@@ -39,7 +39,6 @@ $(window).on("load", function () {
   });
 
   $("#tab").load("/components/tab.html");
-
   $("#bio").load("/components/bio.html");
 
   AOS.init();
