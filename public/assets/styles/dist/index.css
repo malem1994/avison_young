@@ -604,6 +604,11 @@ main section + section {
     max-width: unset;
   }
 }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: unset;
+  }
+}
 
 @media screen and (max-width: 1280px) {
   article .section-body .listing {
@@ -1071,6 +1076,9 @@ aside {
 }
 .card.common:hover .card-bot-price {
   color: var(--card-bot-pricing-active);
+}
+.card.featured {
+  max-width: 340px;
 }
 .card.featured .card-title {
   margin-bottom: 0;

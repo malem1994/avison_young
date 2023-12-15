@@ -240,6 +240,8 @@
   }
 
   &.featured {
+    max-width: 340px;
+
     .card {
       &-title {
         margin-bottom: 0;
