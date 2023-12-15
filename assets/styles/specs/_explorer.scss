@@ -24,6 +24,8 @@
   &-content {
     @extend .font-inter;
 
+    white-space: nowrap;
+
     position: relative;
     width: fit-content;
     padding: 60px;
@@ -62,6 +64,18 @@
 
     @media screen and (max-width: 768px) {
       padding: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 24px;
+
+    &-content {
+      &-title {
+        &.btn {
+          margin-top: 24px;
+        }
+      }
     }
   }
 }

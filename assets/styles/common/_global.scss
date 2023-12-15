@@ -65,6 +65,10 @@
   --br-mini: 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   line-height: normal;

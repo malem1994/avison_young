@@ -109,4 +109,18 @@
       opacity: .4;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    &-primary {
+      padding: 16px 24px
+    }
+
+    &-seconday {
+      padding: 16px 24px
+    }
+
+    &-outline {
+      padding: 16px 24px
+    }
+  }
 }

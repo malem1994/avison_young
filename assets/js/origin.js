@@ -1,11 +1,24 @@
 $(window).on("load", function () {
+  $("#header").load("/layout/header.html", function () {
+    const burger = $('#burger');
+    const menu = $('#navg');
 
+    burger.on('click', function () {
+      menu.toggleClass('active');
+    })
+  });
 
-  $("#header").load("/layout/header.html");
   $("#footer").load("/layout/footer.html");
-  $("#sidebar").load("/layout/sidebar.html");
+  $("#sidebar").load("/layout/sidebar.html", function () {
+    const toggleSidebar = $('#sidebarToggle');
+    const conttentSidebar = $('.sidebar-content');
 
-  $("#filter").load("/components/filter.html", function (data) {
+    toggleSidebar.on('click', function () {
+      conttentSidebar.slideToggle();
+    })
+  });
+
+  $("#filter").load("/components/filter.html", function () {
     const priceChange = $('#price-change');
     const priceTextChange = $('#price-change .text');
     const priceComptChange = $('#price-change-content .item');

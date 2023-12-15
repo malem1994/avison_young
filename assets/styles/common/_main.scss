@@ -38,3 +38,14 @@ main {
     max-width: unset;
   }
 }
+
+article {
+  .section-body {
+    .listing {
+      @media screen and (max-width: 1280px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+  }
+}

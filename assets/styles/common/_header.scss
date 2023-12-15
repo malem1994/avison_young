@@ -162,6 +162,31 @@ header {
     ul {
       overflow-x: scroll;
     }
+  }
 
+  @media screen and (max-width: 992px) {
+    ul {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      width: 100%;
+      background: var(--color-white);
+      flex-direction: column;
+      transition: all .4s ease;
+      z-index: 2;
+
+      li {
+        width: 100%;
+        text-align: center;
+      }
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        transition: all .4s ease;
+      }
+    }
   }
 }

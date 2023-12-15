@@ -2,6 +2,12 @@ aside {
   position: sticky;
   top: 0;
   max-width: 340px;
+
+  @media screen and (max-width: 1024px) {
+    position: unset;
+    max-width: unset;
+    margin: 0 12px;
+  }
 }
 
 .sidebar {
@@ -58,6 +64,12 @@ aside {
       &+.col {
         margin-top: 16px;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &-content {
+      display: none;
     }
   }
 }
