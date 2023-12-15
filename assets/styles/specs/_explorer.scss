@@ -1,0 +1,81 @@
+.explorer {
+  padding: 100px;
+
+  &-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    img {
+      max-width: unset;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, #F9F9F9 100%);
+    }
+  }
+
+  &-content {
+    @extend .font-inter;
+
+    white-space: nowrap;
+
+    position: relative;
+    width: fit-content;
+    padding: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/img-bg-tear.png") no-repeat top center/auto 100%;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+      top: -5%;
+    }
+
+    &-cap {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+
+    &-title {
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--color-white);
+
+      &+button {
+        &.btn {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &-meme {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 24px;
+
+    &-content {
+      &-title {
+        &.btn {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

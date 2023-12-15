@@ -1,0 +1,106 @@
+:root {
+  /* fonts */
+  --font-montserrat: 'Montserrat';
+  --font-inter: 'Inter';
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-13xl: 32px;
+  --font-size-17xl: 36px;
+  --font-size-sm: 14px;
+  --font-size-2xs: 11px;
+  --font-size-xs: 12px;
+
+  /* Colors */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-gray-100: rgba(0, 0, 0, 0.4);
+  --color-gray-200: rgba(255, 255, 255, 0.4);
+  --color-gray-300: rgba(255, 255, 255, 0.5);
+  --color-gray-400: rgba(0, 0, 0, 0.02);
+  --color-gray-500: rgba(0, 0, 0, 0.5);
+  --color-gray-600: rgba(0, 0, 0, 0.3);
+  --color-gray-700: rgba(0, 0, 0, 0.6);
+  --color-gray-800: rgba(255, 255, 255, 0.6);
+  --color-sandybrown: #f8b463;
+  --color-darkslategray-100: #243645;
+  --color-darkslateblue-100: #0f386d;
+  --color-darkgray: #a6a6a6;
+  --color-lightcoral: #ff7e82;
+  --color-gainsboro: #d9d9d9;
+  --color-whitesmoke: #f9f9f9;
+
+  --color-sale: #ee3124;
+  --color-shape-sale: #891B13;
+  --color-rent: #00467F;
+  --color-shape-rent: #092F4E;
+  --color-stamp-default: #2A2A2A;
+  --color-shape-stamp-default: #000000;
+
+  /* Card Colors*/
+  --card-sub-default: #FAFAFA;
+  --card-sub-title-default: #7D7D7D;
+  --card-sub-value-default: #243645;
+  --card-title-default: #000000;
+  --card-content-default: #666666;
+  --card-stroke-default: #D9D9D9;
+  --card-bot-tag-stroke-default: #A6A6A6;
+  --card-bot-tag-text-default: #FF7E82;
+  --card-bot-pricing-default: #0F386D;
+
+  --card-sub-active: #233544;
+  --card-sub-title-active: #919AA1;
+  --card-sub-value-active: #FFFFFF;
+  --card-title-active: #FFFFFF;
+  --card-content-active: #A7AFB5;
+  --card-stroke-active: #D9D9D9;
+  --card-bot-tag-stroke-active: #A6A6A6;
+  --card-bot-tag-text-active: #FFFFFF;
+  --card-bot-pricing-active: #F8B463;
+
+  /* Border radiuses */
+  --br-12xs: 1px;
+  --br-7xs: 6px;
+  --br-mini: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+
+  font-family: 'Montserrat', Courier, monospace;
+  background-color: var(--color-whitesmoke);
+
+  animation: Opacity .4s linear;
+}
+
+@keyframes Opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+* {
+  transition: all .4s ease;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input,
+select {
+  &:focus {
+    box-shadow: none !important;
+  }
+}

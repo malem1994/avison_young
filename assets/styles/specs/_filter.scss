@@ -1,0 +1,251 @@
+.filter {
+  padding: 40px 55px;
+  background-color: #393939;
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    button {
+      &[type="submit"] {
+        margin-top: 15px;
+        height: 52px;
+        grid-column-end: -1;
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: unset;
+      grid-template-rows: repeat(1, 1fr);
+
+      &>* {
+        width: 100%;
+      }
+    }
+  }
+
+  .col {
+
+    .btn-price,
+    label {
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 600;
+      color: var(--color-white);
+
+      margin-bottom: 15px;
+    }
+
+    .form-control,
+    .form-select {
+      border-color: transparent;
+      border-radius: 0;
+
+      height: 52px;
+    }
+
+    &.end {
+      grid-column-start: -3;
+      grid-column-end: -1;
+
+      .price-labels {
+        margin-bottom: 16px;
+      }
+
+      #price-change {
+        cursor: pointer;
+
+        .text {
+          cursor: pointer;
+          height: 16px;
+          overflow: hidden;
+
+          &>* {
+            cursor: pointer;
+          }
+
+          &.active {
+            &>* {
+              transform: translateY(-110%);
+            }
+          }
+        }
+
+        &-content {
+          max-height: calc(52px + 16px);
+          overflow-y: hidden;
+          gap: 40px;
+
+          .item {
+            &.inputs {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 20px;
+            }
+
+            &.range {
+              margin: 10px 15px 0;
+
+              .irs {
+                .irs {
+                  &-line {
+                    height: 8px;
+                    background-color: rgba(255, 255, 255, .4);
+                  }
+
+                  &-bar {
+                    height: 8px;
+                    background-color: rgba(255, 255, 255, .6);
+                  }
+
+                  &-grid {
+                    &-text {
+                      @extend .font-inter;
+                      font-size: 12px;
+                      color: var(--color-gray-200);
+                    }
+                  }
+
+                  &-min,
+                  &-max {
+                    @extend .font-inter;
+                    font-size: 12px;
+                  }
+
+                  &-from,
+                  &-to {
+                    @extend .font-inter;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: var(--color-black);
+                    background-color: var(--color-white);
+                    padding: 2px 5px;
+
+                    &::before {
+                      border-top-color: var(--color-white);
+                    }
+                  }
+
+                  &-handle {
+                    border-radius: 8px;
+                    width: 24px;
+                    height: 12px;
+                    top: 24px;
+                    background-color: var(--color-white);
+
+                    &>i {
+                      background-color: var(--color-gray-200);
+                    }
+                  }
+                }
+              }
+            }
+
+            &.active {
+              transform: translateY(calc(-100% - 40px));
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &.end {
+        grid-column-start: auto;
+        grid-column-end: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 16px 24px;
+  }
+
+
+  &-owner {
+    &-act {
+      background-color: #2A2A2A;
+      padding: 16px 20px;
+
+      select {
+        &.form-select {
+          min-width: 160px;
+          border-radius: 0;
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: rgba(211, 211, 211, 0.10);
+          background-image: url("../../img/icon-caret-down.svg");
+          color: var(--color-white);
+          border-color: var(--color-white);
+        }
+      }
+
+      .right {
+        div {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: var(--color-white);
+            bottom: -1px;
+            right: 0;
+            transition: width .4s ease;
+          }
+        }
+
+        &:hover {
+          div {
+            opacity: .6;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .chip {
+        background-color: rgba(0, 0, 0, .05);
+        padding: 5px 16px 5px 8px;
+        width: fit-content;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+
+        img {
+          margin-right: 8px;
+        }
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+
+    &-rs {
+      &>.d-flex {
+        gap: 4px;
+        font-weight: 600;
+        color: var(--color-black);
+
+        span {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
