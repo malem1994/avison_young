@@ -565,11 +565,16 @@ header {
   }
 }
 @media screen and (max-width: 992px) {
+  .menu {
+    overflow: auto;
+  }
   .menu ul {
     position: absolute;
     visibility: hidden;
     opacity: 0;
     height: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background: var(--color-white);
     flex-direction: column;
@@ -583,7 +588,8 @@ header {
   .menu ul.active {
     visibility: visible;
     opacity: 1;
-    height: auto;
+    height: 100vh;
+    overflow: auto;
     transition: all 0.4s ease;
   }
 }
