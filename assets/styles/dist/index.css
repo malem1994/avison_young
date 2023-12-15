@@ -109,6 +109,8 @@ th {
   --color-shape-sale: #891B13;
   --color-rent: #00467F;
   --color-shape-rent: #092F4E;
+  --color-stamp-default: #2A2A2A;
+  --color-shape-stamp-default: #000000;
   /* Card Colors*/
   --card-sub-default: #FAFAFA;
   --card-sub-title-default: #7D7D7D;
@@ -681,6 +683,66 @@ main section + section {
     padding: 16px 24px;
   }
 }
+.filter-owner-act {
+  background-color: #2A2A2A;
+  padding: 16px 20px;
+}
+.filter-owner-act select.form-select {
+  min-width: 160px;
+  border-radius: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgba(211, 211, 211, 0.1);
+  background-image: url("../../img/icon-caret-down.svg");
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+.filter-owner-act .right div {
+  position: relative;
+}
+.filter-owner-act .right div::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: var(--color-white);
+  bottom: -1px;
+  right: 0;
+  transition: width 0.4s ease;
+}
+.filter-owner-act .right:hover div {
+  opacity: 0.6;
+}
+.filter-owner-act .right:hover div::after {
+  width: 100%;
+}
+.filter-owner-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.filter-owner-chips .chip {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 5px 16px 5px 8px;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filter-owner-chips .chip img {
+  margin-right: 8px;
+}
+.filter-owner-chips .chip:hover {
+  opacity: 0.6;
+}
+.filter-owner-rs > .d-flex {
+  gap: 4px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.filter-owner-rs > .d-flex span {
+  opacity: 0.5;
+}
 
 aside {
   position: sticky;
@@ -795,6 +857,23 @@ aside {
 }
 .card.common .card-stamp.rent > *.rent::after {
   border-top-color: var(--color-shape-rent);
+}
+.card.common .card-stamp.stamp-default > * {
+  min-width: unset;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.card.common .card-stamp.stamp-default > *.stamp-default {
+  background-color: var(--color-stamp-default);
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.card.common .card-stamp.stamp-default > *.stamp-default::after {
+  border-top-color: var(--color-shape-stamp-default);
 }
 .card.common .card-img {
   overflow: hidden;

@@ -165,4 +165,87 @@
   @media screen and (max-width: 992px) {
     padding: 16px 24px;
   }
+
+
+  &-owner {
+    &-act {
+      background-color: #2A2A2A;
+      padding: 16px 20px;
+
+      select {
+        &.form-select {
+          min-width: 160px;
+          border-radius: 0;
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: rgba(211, 211, 211, 0.10);
+          background-image: url("../../img/icon-caret-down.svg");
+          color: var(--color-white);
+          border-color: var(--color-white);
+        }
+      }
+
+      .right {
+        div {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: var(--color-white);
+            bottom: -1px;
+            right: 0;
+            transition: width .4s ease;
+          }
+        }
+
+        &:hover {
+          div {
+            opacity: .6;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .chip {
+        background-color: rgba(0, 0, 0, .05);
+        padding: 5px 16px 5px 8px;
+        width: fit-content;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+
+        img {
+          margin-right: 8px;
+        }
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+
+    &-rs {
+      &>.d-flex {
+        gap: 4px;
+        font-weight: 600;
+        color: var(--color-black);
+
+        span {
+          opacity: .5;
+        }
+      }
+    }
+  }
 }

@@ -64,6 +64,7 @@
 
         @include cardStamp('sale');
         @include cardStamp('rent');
+        @include cardStamp('stamp-default');
       }
 
       &-img {
