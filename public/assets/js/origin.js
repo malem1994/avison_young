@@ -18,7 +18,7 @@ $(window).on("load", function () {
     })
   });
 
-  $("#filter").load("/components/filter.html", function () {
+  $("#filter").load("/public/components/filter.html", function () {
     const priceChange = $('#price-change');
     const priceTextChange = $('#price-change .text');
     const priceComptChange = $('#price-change-content .item');
@@ -38,8 +38,8 @@ $(window).on("load", function () {
     });
   });
 
-  $("#tab").load("/components/tab.html");
-  $("#bio").load("/components/bio.html");
+  $("#tab").load("/public/components/tab.html");
+  $("#bio").load("/public/components/bio.html");
 
   AOS.init();
 })

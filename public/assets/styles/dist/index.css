@@ -157,10 +157,6 @@ body {
     opacity: 1;
   }
 }
-* {
-  transition: all 0.4s ease;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -589,6 +585,9 @@ main section + section {
 }
 @media screen and (max-width: 992px) {
   .section-body .listing {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    justify-content: center;
     gap: 16px;
   }
 }
@@ -610,6 +609,13 @@ main section + section {
   article .section-body .listing {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  article .section-body .listing {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    justify-content: center;
   }
 }
 
