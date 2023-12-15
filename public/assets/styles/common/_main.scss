@@ -27,6 +27,30 @@ main {
         grid-template-rows: auto;
         justify-content: center;
       }
+
+      &.have-sidebar {
+
+        .card {
+          &.small {
+            max-width: unset;
+          }
+        }
+
+        @media screen and (max-width: 1440px) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px;
+        }
+
+        @media screen and (max-width: 1280px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 768px) {
+          grid-template-columns: unset;
+          grid-template-rows: auto;
+          justify-content: center;
+        }
+      }
     }
   }
 }
@@ -35,21 +59,8 @@ main {
   @media screen and (min-width: 768px) and (max-width: 992px) {
     max-width: unset;
   }
-}
 
-article {
-  .section-body {
-    .listing {
-      @media screen and (max-width: 1280px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-
-      @media screen and (max-width: 768px) {
-        grid-template-columns: unset;
-        grid-template-rows: auto;
-        justify-content: center;
-      }
-    }
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    max-width: unset;
   }
 }

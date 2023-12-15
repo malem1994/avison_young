@@ -410,8 +410,44 @@ section .heading > h1 + img {
   }
 }
 
+.dropdown-toggle {
+  border-radius: 0;
+  background-color: var(--color-white) !important;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropdown-toggle::after {
+  position: absolute;
+  right: 16px;
+}
+.dropdown-toggle.active + .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  width: 100%;
+  border-radius: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+.dropdown-menu > li a {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 header {
   background-color: var(--color-white);
+}
+@media screen and (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 }
 
 .header--sup {
@@ -598,24 +634,36 @@ main section + section {
     justify-content: center;
   }
 }
+.section-body .listing.have-sidebar .card.small {
+  max-width: unset;
+}
+@media screen and (max-width: 1440px) {
+  .section-body .listing.have-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .section-body .listing.have-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-body .listing.have-sidebar {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     max-width: unset;
   }
 }
-
-@media screen and (max-width: 1280px) {
-  article .section-body .listing {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  article .section-body .listing {
-    grid-template-columns: unset;
-    grid-template-rows: auto;
-    justify-content: center;
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: unset;
   }
 }
 
@@ -856,6 +904,15 @@ aside {
 }
 .sidebar-content .col + .col {
   margin-top: 16px;
+}
+.sidebar-content .col .dropdown-toggle {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.sidebar-content .col .dropdown-toggle.active + .dropdown-menu {
+  display: block;
+}
+.sidebar-content .col .dropdown-menu {
+  background-color: #E3E3E3;
 }
 @media screen and (max-width: 768px) {
   .sidebar-content {
@@ -1256,4 +1313,9 @@ aside {
   width: 30px;
   height: 20px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .bio-card {
+    flex-direction: column;
+  }
 }

@@ -64,6 +64,22 @@ aside {
       &+.col {
         margin-top: 16px;
       }
+
+      .dropdown {
+        &-toggle {
+          background-color: rgba(0, 0, 0, .05) !important;
+
+          &.active {
+            &+.dropdown-menu {
+              display: block;
+            }
+          }
+        }
+
+        &-menu {
+          background-color: #E3E3E3;
+        }
+      }
     }
   }
 

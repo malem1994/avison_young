@@ -52,7 +52,196 @@
         <section
           id="filter"
           class="filter"
-        ></section>
+        >
+          <form action="">
+            <div class="col">
+              <label>Keyword Or Property ID</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                value=""
+              />
+            </div>
+            <div class="col">
+              <label>Contract Type</label>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Another action</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <label>Property Type</label>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Another action</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <label>City/Province</label>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Another action</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <label>District</label>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      >Another action</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <label>Category</label>
+              <select class="form-select">
+                <option>All</option>
+                <option>Value1</option>
+              </select>
+            </div>
+            <div class="price col end">
+              <div class="price-labels d-flex justify-content-between">
+                <label class="mb-0">Price</label>
+                <div
+                  id="price-change"
+                  class="d-flex align-items-center"
+                >
+                  <img
+                    src="/public/assets/img/icon-level-down.svg"
+                    alt="Avison Young"
+                  />
+                  <div class="text d-flex flex-column ms-2">
+                    <label class="mb-0">Input</label>
+                    <label class="mb-0">Range</label>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="price-change-content"
+                class="d-flex flex-column"
+              >
+                <div class="item inputs">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="From"
+                    value=""
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="To"
+                    value=""
+                  />
+                </div>
+
+                <div class="item range">
+                  <input
+                    type="text"
+                    class="js-range-slider custom"
+                    name="my_range"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-primary p-0 w-100"
+              type="submit"
+            >
+              <div class="fw-bold">SEARCH</div>
+            </button>
+          </form>
+        </section>
 
         <!-- INDUSTRIAL -->
         <section>
