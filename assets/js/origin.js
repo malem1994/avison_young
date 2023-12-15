@@ -41,4 +41,6 @@ $(window).on("load", function () {
   $("#tab").load("/components/tab.html");
 
   $("#bio").load("/components/bio.html");
+
+  AOS.init();
 })

@@ -146,8 +146,17 @@ body {
   line-height: normal;
   font-family: "Montserrat", Courier, monospace;
   background-color: var(--color-whitesmoke);
+  animation: Opacity 0.4s linear;
 }
 
+@keyframes Opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   transition: all 0.4s ease;
 }
