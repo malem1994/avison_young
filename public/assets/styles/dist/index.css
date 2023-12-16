@@ -1225,6 +1225,9 @@ aside {
 .card.common:hover .card-bot-price {
   color: var(--card-bot-pricing-active);
 }
+.card.featured {
+  max-width: 305px;
+}
 .card.featured .card-title {
   margin-bottom: 0;
   padding-left: 15px;
@@ -1235,6 +1238,11 @@ aside {
   padding-right: 15px;
   padding-top: 16px;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .card.featured {
+    max-width: 375px;
+  }
 }
 @media screen and (max-width: 768px) {
   .card {

@@ -240,6 +240,8 @@
   }
 
   &.featured {
+    max-width: 305px;
+
     .card {
       &-title {
         margin-bottom: 0;
@@ -253,6 +255,10 @@
         padding-top: 16px;
         padding-bottom: 40px;
       }
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 375px;
     }
   }
 
