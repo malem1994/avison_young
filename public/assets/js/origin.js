@@ -1,4 +1,7 @@
 $(window).on("load", function () {
+  $("#bio").load("/public/components/bio.html");
+
+  // Menu Burger
   const burger = $('#burger');
   const menu = $('#navg');
 
@@ -7,18 +10,15 @@ $(window).on("load", function () {
     $('body').toggleClass('overflowHidden');
   })
 
-  $("#footer").load("/public/layout/footer.html");
-  $("#tab").load("/public/components/tab.html");
-  $("#bio").load("/public/components/bio.html");
-
+  // Dropdown
   const dropdown = $('.dropdown-toggle');
-
   dropdown.each(function (index) {
     $(this).on("click", function () {
       $(this).toggleClass('active');
     });
   })
 
+  // Price Changing
   const priceChange = $('#price-change');
   const priceTextChange = $('#price-change .text');
   const priceComptChange = $('#price-change-content .item');
@@ -37,6 +37,7 @@ $(window).on("load", function () {
     prefix: "$"
   });
 
+  // Sidebar Toggle
   const toggleSidebar = $('#sidebarToggle');
   const conttentSidebar = $('.sidebar-content');
 
@@ -44,5 +45,6 @@ $(window).on("load", function () {
     conttentSidebar.slideToggle();
   })
 
+  // AOS
   AOS.init();
 })
