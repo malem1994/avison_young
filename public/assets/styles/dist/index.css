@@ -173,7 +173,7 @@ select:focus {
   font-family: var(--font-montserrat), sans-serif;
   font-style: normal;
 }
-.font-inter, .bio-content, .explorer-content, .card.common .card-sub-item, .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to, .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max, .filter .col.end #price-change-content .item.range .irs .irs-grid-text {
+.font-inter, .bio-content, .explorer-content, .tabs ul li label, .card.common .card-sub-item, .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to, .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max, .filter .col.end #price-change-content .item.range .irs .irs-grid-text {
   font-family: var(--font-inter), sans-serif;
   font-style: normal;
 }
@@ -457,7 +457,7 @@ header {
 @media screen and (max-width: 992px) {
   .header--sup {
     font-size: 14px;
-    z-index: 3;
+    z-index: 5;
     position: relative;
   }
   .header--sup .left + .right {
@@ -559,7 +559,7 @@ header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 4;
+    z-index: 5;
   }
   .logo a {
     margin: 25px 0;
@@ -572,6 +572,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 .menu ul li {
   list-style: none;
@@ -617,7 +618,7 @@ header {
     background: var(--color-white);
     flex-direction: column;
     transition: all 0.4s ease;
-    z-index: 2;
+    z-index: 3;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-1000%);
@@ -1204,43 +1205,159 @@ aside {
   }
 }
 
-.nav-tabs {
-  overflow: hidden;
-  justify-content: center;
-  border-color: rgba(0, 0, 0, 0.09);
-}
-.nav-tabs .nav-item .nav-link {
+/* colors */
+/* tab setting */
+/* breakpoints */
+/* selectors relative to radio inputs */
+.tabs {
   position: relative;
-  border: none !important;
-  font-size: 18px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
-  padding: 15px 20px;
+  min-width: 180px;
+  width: 50%;
+  margin: 32px auto;
 }
-.nav-tabs .nav-item .nav-link::before {
+.tabs::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 4px;
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 200%;
+  left: -50%;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--color-black);
-  transform: translateY(100%);
-  transition: all 0.2s linear;
+  height: 2px;
 }
-.nav-tabs .nav-item .nav-link.active {
-  background-color: transparent;
-  color: var(--color-black);
+@media screen and (max-width: 768px) {
+  .tabs {
+    width: 100%;
+  }
+  .tabs::after {
+    width: 100%;
+    left: 0;
+  }
 }
-.nav-tabs .nav-item .nav-link.active::before {
-  transform: translateY(0);
+.tabs input[name=tab-control] {
+  display: none;
 }
-.nav-tabs .nav-item .nav-link:not(.active):hover {
-  color: var(--color-black);
+.tabs ul li label {
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
 }
-.nav-tabs .nav-item .nav-link:not(.active):hover::before {
-  transform: translateY(0);
+@media screen and (max-width: 768px) {
+  .tabs ul li label {
+    font-size: 14px;
+  }
+}
+.tabs ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tabs ul li {
+  box-sizing: border-box;
+  flex: 1;
+  width: 33.3333333333%;
+  padding: 0 10px;
+  text-align: center;
+}
+.tabs ul li label {
+  transition: all 0.3s ease-in-out;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+}
+.tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
+  outline: 0;
+  color: rgba(38, 38, 38, 0.6);
+}
+.tabs .slider {
+  position: relative;
+  width: 33.3333333333%;
+  transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+.tabs .slider .indicator {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: black;
+  border-radius: 1px;
+}
+.tabs .content {
+  margin-top: 30px;
+}
+.tabs .content section {
+  display: none;
+  animation-name: content;
+  animation-direction: normal;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  line-height: 1.4;
+}
+.tabs .content section h2 {
+  color: black;
+  display: none;
+}
+.tabs .content section h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin-top: 5px;
+  left: 1px;
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+  cursor: default;
+  color: black;
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked ~ .slider {
+  transform: translateX(0%);
+}
+.tabs input[name=tab-control]:nth-of-type(1):checked + .content > section:nth-child(1) {
+  display: block;
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+  cursor: default;
+  color: black;
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked ~ .slider {
+  transform: translateX(100%);
+}
+.tabs input[name=tab-control]:nth-of-type(2):checked + .content > section:nth-child(2) {
+  display: block;
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+  cursor: default;
+  color: black;
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked ~ .slider {
+  transform: translateX(200%);
+}
+.tabs input[name=tab-control]:nth-of-type(3):checked + .content > section:nth-child(3) {
+  display: block;
+}
+@keyframes content {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .explorer {

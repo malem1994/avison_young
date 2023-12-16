@@ -1,55 +1,199 @@
-.nav {
-  &-tabs {
-    overflow: hidden;
-    justify-content: center;
+/* colors */
+$black: rgba(0, 0, 0, 1);
 
-    border-color: rgba(0, 0, 0, .09);
+$accent: $black;
+$accent-inactive: rgba(0, 0, 0, .6);
+$secondary: $accent-inactive;
 
-    .nav {
-      &-item {
-        .nav {
-          &-link {
-            position: relative;
-            border: none !important;
-            font-size: 18px;
-            font-weight: 600;
-            color: rgba(0, 0, 0, .6);
-            padding: 15px 20px;
 
-            &::before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 4px;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background-color: var(--color-black);
-              transform: translateY(100%);
-              transition: all .2s linear;
-            }
+/* tab setting */
+$tab-count: 3;
+$indicator-width: 100%;
+$indicator-height: 4px;
 
-            &.active {
-              background-color: transparent;
-              color: var(--color-black);
+/* breakpoints */
+$breakpoints: (
+  medium: #{$tab-count*250px},
+  small: #{$tab-count*150px}
+);
 
-              &::before {
-                transform: translateY(0);
-              }
-            }
 
-            &:not(.active) {
-              &:hover {
-                color: var(--color-black);
+/* selectors relative to radio inputs */
+$label-selector: "~ ul > li";
+$slider-selector: "~ .slider";
+$content-selector: "+ .content > section";
 
-                &::before {
-                  transform: translateY(0);
-                }
-              }
-            }
-          }
+@mixin tabs($label-selector: $label-selector,
+  $slider-selector: $slider-selector,
+  $content-selector: $content-selector) {
+
+  @for $i from 1 through $tab-count {
+    &:nth-of-type(#{$i}):checked {
+      #{$label-selector}:nth-child(#{$i}) {
+        @content;
+      }
+
+      #{$slider-selector} {
+        transform: translateX(#{100% * ($i - 1)});
+      }
+
+      #{$content-selector}:nth-child(#{$i}) {
+        display: block;
+      }
+    }
+  }
+}
+
+.tabs {
+  position: relative;
+  min-width: #{$tab-count * 60px};
+  width: 50%;
+  margin: 32px auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, .09);
+    width: 200%;
+    left: -50%;
+    bottom: 0;
+    height: 2px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  input[name="tab-control"] {
+    display: none;
+  }
+
+  ul li label {
+    @extend .font-inter;
+    font-weight: 600;
+    font-size: 18px;
+    color: $accent;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    li {
+      box-sizing: border-box;
+      flex: 1;
+      width: #{100%/$tab-count};
+      padding: 0 10px;
+      text-align: center;
+
+      label {
+        transition: all 0.3s ease-in-out;
+        color: $secondary;
+        padding: 5px auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        white-space: nowrap;
+        -webkit-touch-callout: none;
+        // @include user-select(none);
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: 0;
+          color: lighten($secondary, 15%);
         }
       }
+    }
+  }
+
+  .slider {
+    position: relative;
+    // width: #{100%/$tab-count};
+    width: #{100%/$tab-count};
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+
+    .indicator {
+      position: relative;
+      width: $indicator-width;
+      max-width: 100%;
+      margin: 0 auto;
+      height: $indicator-height;
+      background: $accent;
+      border-radius: 1px;
+    }
+
+  }
+
+  .content {
+    margin-top: 30px;
+
+    section {
+      display: none;
+
+      animation: {
+        name: content;
+        direction: normal;
+        duration: 0.3s;
+        timing-function: ease-in-out;
+        iteration-count: 1;
+      }
+
+      line-height: 1.4;
+
+      h2 {
+        color: $accent;
+        display: none;
+
+        &::after {
+          content: "";
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 3px;
+          background: $accent;
+          margin-top: 5px;
+          left: 1px;
+        }
+      }
+    }
+  }
+
+  input[name="tab-control"] {
+    @include tabs {
+      >label {
+        cursor: default;
+        color: $accent;
+      }
+    }
+  }
+
+  @keyframes content {
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0%);
     }
   }
 }

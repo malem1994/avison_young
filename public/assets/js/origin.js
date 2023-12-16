@@ -1,5 +1,4 @@
 $(window).on("load", function () {
-  // $("#header").load("/public/layout/header.html", function () {
   const burger = $('#burger');
   const menu = $('#navg');
 
@@ -7,7 +6,6 @@ $(window).on("load", function () {
     menu.toggleClass('active');
     $('body').toggleClass('overflowHidden');
   })
-  // });
 
   $("#footer").load("/public/layout/footer.html");
   $("#tab").load("/public/components/tab.html");
