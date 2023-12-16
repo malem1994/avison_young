@@ -189,7 +189,7 @@
             <a
               id="burger"
               href="#"
-              class="d-flex d-lg-none p-1 border border-1 border-dark justify-content-center"
+              class="d-flex d-xl-none p-1 border border-1 border-dark justify-content-center"
               style="width: 40px; height: 40px"
             >
               <i class="bi bi-list fs-3 text-black"></i>
@@ -241,9 +241,33 @@
                   <div class="fw-semibold opacity-50 text-white text-nowrap">
                     Sort by
                   </div>
-                  <select class="form-select ms-3">
+                  <!-- <select class="form-select ms-3">
                     <option>Latest</option>
-                  </select>
+                  </select> -->
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                    >
+                      Latest
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          >Latest</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          >Newest</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <a
                   href="#"
@@ -1589,167 +1613,50 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- EXPLORER -->
-          <section>
-            <div class="explorer position-relative w-100">
-              <div class="explorer-bg">
-                <img
-                  src="/public/assets/img/img-map.png"
-                  alt="Avison Young"
-                />
-              </div>
-              <div
-                class="explorer-content d-flex flex-column align-items-center justify-content-center mx-auto"
-              >
-                <div class="explorer-content-cap">Explore</div>
-                <p class="explorer-content-title mt-3">OUR HOMES</p>
-                <a class="btn btn-primary mx-auto mt-55">Map Search</a>
-                <p class="explorer-content-meme pt-3">in map view</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- PROPERTY -->
-          <section>
-            <div
-              class="property d-flex flex-column align-items-center justify-content-center"
-            >
-              <h2 class="property-title">CAN’T FIND THE PROPERTY?</h2>
-              <a
-                class="btn btn-primary mx-auto mt-3"
-                href="/"
-              >
-                Property Alerts
-              </a>
-              <p class="property-meme text-gray-800">You are looking for?</p>
-            </div>
-          </section>
-
-          <!-- MEET OUR TEAM -->
-          <section id="bio">
-            <div
-              class="heading d-flex flex-column justify-content-center alig align-items-center"
-            >
-              <h2 class="fw-bold">MEET OUR TEAM</h2>
-              <img
-                src="/public/assets/img/heading-underline.svg"
-                alt="Avison Young"
-              />
-            </div>
-
-            <div class="section-body">
-              <div class="bio d-flex flex-wrap gap-3 align-items-center">
-                <div class="bio-card">
-                  <div class="bio-avatar">
-                    <img
-                      src="/public/assets/img/avatar-image-1.png"
-                      alt="Avison Young"
-                    />
-                  </div>
-                  <div class="bio-content">
-                    <div class="bio-content--title">Hung Vo</div>
-                    <div class="bio-content--sub">
-                      Sales Coordinator | Residential Service
-                    </div>
-                    <div class="bio-content--contact">
-                      <ul>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-phone-flip.svg"
-                            alt="Avison Young"
-                          />
-                          <a href="tel:+84343899991">+84 343 899 991</a>
-                        </li>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-envelope.svg"
-                            alt="Avison Young"
-                          />
-                          <a
-                            href="mailto:hung.vo@colliers.vn"
-                            target="_blank"
-                            >hung.vo@colliers.vn</a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-messages.svg"
-                            alt="Avison Young"
-                          />
-                          Language
-                          <div class="d-flex">
-                            <img
-                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1280px-Flag_of_Vietnam.svg.png"
-                              alt="Avison Young"
-                            />
-                            <img
-                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
-                              alt="Avison Young"
-                            />
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bio-card">
-                  <div class="bio-avatar">
-                    <img
-                      src="/public/assets/img/avatar-image-2.png"
-                      alt="Avison Young"
-                    />
-                  </div>
-                  <div class="bio-content">
-                    <div class="bio-content--title">Yen Nguyen</div>
-                    <div class="bio-content--sub">
-                      Residential Manager | Residential Service Ho Chi Minh City
-                    </div>
-                    <div class="bio-content--contact">
-                      <ul>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-phone-flip.svg"
-                            alt="Avison Young"
-                          />
-                          <a href="tel:+84913191467">+84 913 191 467</a>
-                        </li>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-envelope.svg"
-                            alt="Avison Young"
-                          />
-                          <a
-                            href="mailto:yen.nguyen@colliers.vn"
-                            target="_blank"
-                            >yen.nguyen@colliers.vn</a
-                          >
-                        </li>
-                        <li>
-                          <img
-                            src="/public/assets/img/icon-messages.svg"
-                            alt="Avison Young"
-                          />
-                          Language
-                          <div class="d-flex">
-                            <img
-                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1280px-Flag_of_Vietnam.svg.png"
-                              alt="Avison Young"
-                            />
-                            <img
-                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
-                              alt="Avison Young"
-                            />
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="#"
+                      aria-label="Previous"
+                    >
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="#"
+                      >1</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="#"
+                      >2</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="#"
+                      >3</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="#"
+                      aria-label="Next"
+                    >
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </section>
         </div>

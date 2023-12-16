@@ -444,6 +444,22 @@ section .heading > h1 + img {
   padding-bottom: 0;
 }
 
+.pagination {
+  margin: 40px 0 0;
+  gap: 12px;
+}
+.pagination .page-item:last-child .page-link, .pagination .page-item:first-child .page-link {
+  border-radius: 0;
+}
+.pagination .page-link {
+  color: rgba(80, 80, 80, 0.8);
+  border-color: rgba(67, 81, 103, 0.5);
+}
+.pagination .page-link:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
 header {
   background-color: var(--color-white);
   display: unset;
@@ -554,7 +570,7 @@ header {
   height: 72px;
   object-fit: contain;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .logo {
     position: sticky;
     position: -webkit-sticky;
@@ -603,7 +619,7 @@ header {
     overflow-x: scroll;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .menu {
     overflow: auto;
   }
@@ -863,6 +879,27 @@ main section + section {
   background-image: url("../../img/icon-caret-down.svg");
   color: var(--color-white);
   border-color: var(--color-white);
+}
+.filter-owner-act .dropdown {
+  margin-left: 16px;
+}
+.filter-owner-act .dropdown-toggle {
+  min-width: 160px;
+  border-radius: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: rgba(211, 211, 211, 0.1) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-white) !important;
+}
+.filter-owner-act .dropdown-menu {
+  background-color: #3B3B3B;
+}
+.filter-owner-act .dropdown-menu > li > a {
+  color: var(--color-white);
+}
+.filter-owner-act .dropdown-menu > li:hover > a, .filter-owner-act .dropdown-menu > li:active > a, .filter-owner-act .dropdown-menu > li:focus > a {
+  color: var(--color-black);
 }
 .filter-owner-act .right div {
   position: relative;
@@ -1440,6 +1477,7 @@ aside {
 
 .bio-card {
   flex: 1 1;
+  align-self: stretch;
   width: 100%;
   display: flex;
   gap: 20px;

@@ -184,6 +184,38 @@
         }
       }
 
+      .dropdown {
+        margin-left: 16px;
+
+        &-toggle {
+          min-width: 160px;
+          border-radius: 0;
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: rgba(211, 211, 211, 0.10) !important;
+          color: var(--color-white) !important;
+          border-color: var(--color-white) !important;
+        }
+
+        &-menu {
+          background-color: #3B3B3B;
+
+          &>li {
+            &>a {
+              color: var(--color-white);
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+              &>a {
+                color: var(--color-black);
+              }
+            }
+          }
+        }
+      }
+
       .right {
         div {
           position: relative;

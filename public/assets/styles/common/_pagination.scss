@@ -1,0 +1,26 @@
+.pagination {
+  margin: 40px 0 0;
+  gap: 12px;
+
+  .page {
+    &-item {
+
+      &:last-child,
+      &:first-child {
+        .page-link {
+          border-radius: 0;
+        }
+      }
+    }
+
+    &-link {
+      color: rgba(80, 80, 80, 0.8);
+      border-color: rgba(67, 81, 103, 0.5);
+
+      &:hover {
+        background: var(--color-black);
+        color: var(--color-white);
+      }
+    }
+  }
+}
