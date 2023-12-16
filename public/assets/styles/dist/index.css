@@ -1,4 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 html,
 body,
@@ -78,8 +79,8 @@ th {
 
 :root {
   /* fonts */
-  --font-montserrat: "Montserrat";
-  --font-inter: "Inter";
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
   /* font sizes */
   --font-size-base: 16px;
   --font-size-lg: 18px;
@@ -144,7 +145,9 @@ html {
 body {
   margin: 0;
   line-height: normal;
-  font-family: "Montserrat", Courier, monospace;
+  -webkit-text-size-adjust: none;
+  font-family: "Montserrat", Courier, monospace, sans-serif;
+  font-style: normal;
   background-color: var(--color-whitesmoke);
   animation: Opacity 0.4s linear;
 }
@@ -167,10 +170,12 @@ select:focus {
 }
 
 .font-montserrat {
-  font-family: var(--font-montserrat);
+  font-family: var(--font-montserrat), sans-serif;
+  font-style: normal;
 }
 .font-inter, .bio-content, .explorer-content, .card.common .card-sub-item, .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to, .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max, .filter .col.end #price-change-content .item.range .irs .irs-grid-text {
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), sans-serif;
+  font-style: normal;
 }
 
 .text-white, footer .footer-links ul li a {
@@ -441,13 +446,7 @@ section .heading > h1 + img {
 
 header {
   background-color: var(--color-white);
-}
-@media screen and (max-width: 768px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-  }
+  display: unset;
 }
 
 .header--sup {
@@ -456,6 +455,11 @@ header {
   padding-bottom: 18px;
 }
 @media screen and (max-width: 992px) {
+  .header--sup {
+    font-size: 14px;
+    z-index: 3;
+    position: relative;
+  }
   .header--sup .left + .right {
     padding-top: 16px;
   }
@@ -507,10 +511,39 @@ header {
 .right .lang span {
   font-size: 18px;
 }
+.right .lang .dropdown {
+  position: relative;
+}
+.right .lang .dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+}
+.right .lang .dropdown-toggle::after {
+  content: none;
+}
+.right .lang .dropdown-menu {
+  width: 24px;
+  background: transparent;
+  border: none !important;
+}
+.right .lang .dropdown-menu li {
+  width: fit-content;
+  background-color: #F9F9F9;
+  border: 1px solid var(--color-gray-800);
+}
+.right .lang .dropdown-item {
+  min-height: unset;
+  width: fit-content;
+}
 .right .acts a:hover {
   color: var(--color-gray-100);
 }
 
+.logo {
+  background-color: var(--color-white);
+  border-bottom: 3px solid var(--color-black);
+  box-sizing: border-box;
+}
 .logo a {
   display: block;
   width: fit-content;
@@ -521,14 +554,19 @@ header {
   height: 72px;
   object-fit: contain;
 }
-
-.menu {
-  overflow-x: hidden;
-  border-top: 3px solid var(--color-black);
-  box-sizing: border-box;
-}
-.menu .overflow {
-  overflow-x: auto;
+@media screen and (max-width: 992px) {
+  .logo {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 4;
+  }
+  .logo a {
+    margin: 25px 0;
+  }
+  .logo a img {
+    height: 40px;
+  }
 }
 .menu ul {
   display: flex;
@@ -569,10 +607,10 @@ header {
     overflow: auto;
   }
   .menu ul {
+    border-bottom: 3px solid var(--color-black);
+    box-sizing: border-box;
     position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
+    height: auto;
     left: 0;
     right: 0;
     width: 100%;
@@ -580,6 +618,9 @@ header {
     flex-direction: column;
     transition: all 0.4s ease;
     z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-1000%);
   }
   .menu ul li {
     width: 100%;
@@ -588,17 +629,22 @@ header {
   .menu ul.active {
     visibility: visible;
     opacity: 1;
-    height: 100vh;
+    transform: translateY(0);
     overflow: auto;
     transition: all 0.4s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu ul li a {
+    padding: 16px 16px;
   }
 }
 
 footer {
   background-color: #1A1A1A;
 }
-footer .footer-logo a svg path {
-  color: red;
+footer .footer-logo a img {
+  background-color: var(--color-black);
 }
 footer .footer-links {
   flex: auto;
@@ -608,6 +654,11 @@ footer .footer-links.d-flex {
 }
 footer .footer-links ul li + li {
   margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  footer .footer-links.d-flex {
+    gap: 48px;
+  }
 }
 
 main {
@@ -861,6 +912,7 @@ main section + section {
 
 aside {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   max-width: 340px;
 }

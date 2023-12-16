@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
   /* fonts */
-  --font-montserrat: 'Montserrat';
-  --font-inter: 'Inter';
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 
   /* font sizes */
   --font-size-base: 16px;
@@ -73,7 +75,10 @@ body {
   margin: 0;
   line-height: normal;
 
-  font-family: 'Montserrat', Courier, monospace;
+  -webkit-text-size-adjust: none;
+
+  font-family: 'Montserrat', Courier, monospace, sans-serif;
+  font-style: normal;
   background-color: var(--color-whitesmoke);
 
   animation: Opacity .4s linear;

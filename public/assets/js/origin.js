@@ -1,19 +1,19 @@
 $(window).on("load", function () {
-  $("#header").load("/public/layout/header.html", function () {
-    const burger = $('#burger');
-    const menu = $('#navg');
+  // $("#header").load("/public/layout/header.html", function () {
+  const burger = $('#burger');
+  const menu = $('#navg');
 
-    burger.on('click', function () {
-      menu.toggleClass('active');
-    })
-  });
+  burger.on('click', function () {
+    menu.toggleClass('active');
+    $('body').toggleClass('overflowHidden');
+  })
+  // });
 
   $("#footer").load("/public/layout/footer.html");
   $("#tab").load("/public/components/tab.html");
   $("#bio").load("/public/components/bio.html");
 
   const dropdown = $('.dropdown-toggle');
-  const option = $('.dropdown-menu');
 
   dropdown.each(function (index) {
     $(this).on("click", function () {

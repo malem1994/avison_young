@@ -6,10 +6,8 @@ footer {
 
     &-logo {
       a {
-        svg {
-          path {
-            color: red;
-          }
+        img {
+          background-color: var(--color-black);
         }
       }
     }
@@ -30,6 +28,14 @@ footer {
           &+li {
             margin-top: 24px;
           }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &-links {
+        &.d-flex {
+          gap: 48px;
         }
       }
     }
