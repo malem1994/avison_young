@@ -1,18 +1,16 @@
 $(window).on("load", function () {
-  $("#bio").load("/public/components/bio.html");
-
   // Menu Burger
   const burger = $('#burger');
   const menu = $('#navg');
 
-  burger.on('click', function () {
+  burger.on('click', function (e) {
     menu.toggleClass('active');
-    $('body').toggleClass('overflowHidden');
+    e.prevetnDefault();
   })
 
   // Dropdown
   const dropdown = $('.dropdown-toggle');
-  dropdown.each(function (index) {
+  dropdown.each(function () {
     $(this).on("click", function () {
       $(this).toggleClass('active');
     });
