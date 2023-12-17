@@ -558,9 +558,11 @@ header {
 }
 
 .logo {
+  position: relative;
   background-color: var(--color-white);
   border-bottom: 3px solid var(--color-black);
   box-sizing: border-box;
+  z-index: 5;
 }
 .logo a {
   display: block;
@@ -573,12 +575,6 @@ header {
   object-fit: contain;
 }
 @media screen and (max-width: 1200px) {
-  .logo {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 5;
-  }
   .logo a {
     margin: 25px 0;
   }
@@ -586,6 +582,7 @@ header {
     height: 40px;
   }
 }
+
 .menu ul {
   display: flex;
   align-items: center;
@@ -656,6 +653,15 @@ header {
 @media screen and (max-width: 768px) {
   .menu ul li a {
     padding: 16px 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 5;
   }
 }
 

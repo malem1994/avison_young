@@ -135,9 +135,11 @@ header {
 }
 
 .logo {
+  position: relative;
   background-color: var(--color-white);
   border-bottom: 3px solid var(--color-black);
   box-sizing: border-box;
+  z-index: 5;
 
   a {
     img {
@@ -152,11 +154,6 @@ header {
   }
 
   @media screen and (max-width: 1200px) {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 5;
-
     a {
       margin: 25px 0;
 
@@ -167,7 +164,6 @@ header {
 
   }
 
-  @media screen and (max-width: 768px) {}
 }
 
 .menu {
@@ -263,5 +259,15 @@ header {
         }
       }
     }
+  }
+}
+
+.sticky {
+  @media screen and (max-width: 1200px) {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 5;
+
   }
 }
