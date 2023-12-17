@@ -535,12 +535,13 @@ header {
 .right .lang .dropdown-toggle {
   background-color: transparent !important;
   border: none !important;
+  height: auto;
 }
 .right .lang .dropdown-toggle::after {
   content: none;
 }
 .right .lang .dropdown-menu {
-  width: 24px;
+  min-width: unset;
   background: transparent;
   border: none !important;
 }
@@ -1022,7 +1023,7 @@ aside {
 .sidebar-content .col .dropdown-menu {
   background-color: #E3E3E3;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .sidebar-content {
     display: none;
   }
