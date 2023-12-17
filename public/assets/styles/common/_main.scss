@@ -55,6 +55,12 @@ main {
           grid-template-columns: unset;
           grid-template-rows: auto;
           justify-content: center;
+
+          .card {
+            &.small {
+              max-width: 375px;
+            }
+          }
         }
       }
     }
