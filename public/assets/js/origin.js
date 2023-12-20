@@ -8,14 +8,6 @@ $(window).on("load", function () {
     e.prevetnDefault();
   })
 
-  // Dropdown
-  const dropdown = $('.dropdown-toggle');
-  dropdown.each(function () {
-    $(this).on("click", function () {
-      $(this).toggleClass('active');
-    });
-  })
-
   // Price Changing
   const priceChange = $('#price-change');
   const priceTextChange = $('#price-change .text');
