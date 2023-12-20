@@ -447,11 +447,11 @@ section .heading > h1 + img {
 .dropdown-menu > li .dropdown-item > [class*=form] {
   min-height: unset;
   height: unset;
+  width: 100%;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 8px;
-  justify-content: center;
 }
 .dropdown-menu > li .dropdown-item > [class*=form] .form-check-input {
   margin-top: 0;
@@ -459,6 +459,8 @@ section .heading > h1 + img {
 .dropdown-menu > li .dropdown-item > [class*=form] .form-check-label {
   font-weight: 400;
   margin: 0;
+  width: 100%;
+  cursor: pointer;
 }
 
 .pagination {
