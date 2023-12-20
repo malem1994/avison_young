@@ -173,7 +173,7 @@ select:focus {
   font-family: var(--font-montserrat), sans-serif;
   font-style: normal;
 }
-.font-inter, .bio-content, .explorer-content, .tabs ul li label, .card.common .card-sub-item, .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to, .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max, .filter .col.end #price-change-content .item.range .irs .irs-grid-text {
+.font-inter, .bio-content, .explorer-content, .tabs ul li label, .card.common .card-sub-item, .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to, .filter .col.end #price-change-content .item.range .irs .irs-single, .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max, .filter .col.end #price-change-content .item.range .irs .irs-grid-text {
   font-family: var(--font-inter), sans-serif;
   font-style: normal;
 }
@@ -202,7 +202,7 @@ select:focus {
 .text-gray-600 {
   color: var(--color-gray-600);
 }
-.text-gray-700 {
+.text-gray-700, .dropdown-menu > li .dropdown-item > [class*=form] .form-check-label {
   color: var(--color-gray-700);
 }
 .text-gray-800 {
@@ -436,12 +436,29 @@ section .heading > h1 + img {
   padding: 0;
   transition: all 0.4s ease;
 }
-.dropdown-menu > li a {
+.dropdown-menu > li .dropdown-item {
   min-height: 52px;
   display: flex;
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
+  color: var(--color-gray-700);
+}
+.dropdown-menu > li .dropdown-item > [class*=form] {
+  min-height: unset;
+  height: unset;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.dropdown-menu > li .dropdown-item > [class*=form] .form-check-input {
+  margin-top: 0;
+}
+.dropdown-menu > li .dropdown-item > [class*=form] .form-check-label {
+  font-weight: 400;
+  margin: 0;
 }
 
 .pagination {
@@ -584,6 +601,17 @@ header {
   }
 }
 
+.menu {
+  animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu ul {
   display: flex;
   align-items: center;
@@ -821,6 +849,9 @@ main section + section {
   overflow-y: hidden;
   gap: 40px;
 }
+.filter .col.end #price-change-content .item {
+  transition: all 0.4s ease;
+}
 .filter .col.end #price-change-content .item.inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -843,6 +874,11 @@ main section + section {
 }
 .filter .col.end #price-change-content .item.range .irs .irs-min, .filter .col.end #price-change-content .item.range .irs .irs-max {
   font-size: 12px;
+}
+.filter .col.end #price-change-content .item.range .irs .irs-single {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-white);
 }
 .filter .col.end #price-change-content .item.range .irs .irs-from, .filter .col.end #price-change-content .item.range .irs .irs-to {
   font-size: 12px;

@@ -81,6 +81,8 @@
           gap: 40px;
 
           .item {
+            transition: all .4s ease;
+
             &.inputs {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
@@ -114,6 +116,14 @@
                   &-max {
                     @extend .font-inter;
                     font-size: 12px;
+                  }
+
+                  &-single {
+                    @extend .font-inter;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: var(--color-white);
+                    // background-color: var(--color-white);
                   }
 
                   &-from,
