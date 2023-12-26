@@ -86,7 +86,16 @@ aside {
 
   @media screen and (max-width: 992px) {
     &-content {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: all .4s ease;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+      }
     }
   }
 }

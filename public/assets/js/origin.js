@@ -32,7 +32,7 @@ $(window).on("load", function () {
   const conttentSidebar = $('.sidebar-content');
 
   toggleSidebar.on('click', function () {
-    conttentSidebar.slideToggle();
+    conttentSidebar.toggleClass('show');
   })
 
   // AOS
